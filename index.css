@@ -43,12 +43,9 @@
 .res-info {
   width: 200px;
   height: 100px;
-  /* margin-bottom: 5px; */
-  /* padding-bottom: 50px; */
   margin: 0px;
   padding: 1px;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  color: black;
 }
 .res-image {
   width: 100%;
@@ -57,4 +54,26 @@
 
 .filter-btn {
   margin: 10px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.shimmer {
+  width: 200px;
+  height: 300px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #f0f0f0;
+}
+
+.restaurant-page {
+  display: flex;
+}
+
+.restaurant-menu {
+  margin-left: 10px;
 }
