@@ -3,15 +3,7 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [isLoggedInUser, setIsLoggedInUser] = useState(false);
-
-  const logOut = () => {
-    setIsLoggedInUser(false);
-  };
-
-  const logIn = () => {
-    setIsLoggedInUser(true);
-  };
+  const [loggedIn, setLoggedIn] = useState("Login");
 
   return (
     <div className="header" style={{ backgroundColor: "#f0f0f0" }}>
@@ -34,11 +26,14 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      {isLoggedInUser ? (
-        <button onClick={logOut}>Logout</button>
-      ) : (
-        <button onClick={logIn}>Login</button>
-      )}
+      <button
+        className="login-btn"
+        onClick={() => {
+          loggedIn === "Login" ? setLoggedIn("Logout") : setLoggedIn("Login");
+        }}
+      >
+        {loggedIn}
+      </button>
     </div>
   );
 };
