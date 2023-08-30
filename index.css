@@ -77,3 +77,20 @@
 .restaurant-menu {
   margin-left: 10px;
 }
+
+.filter-container {
+  display: flex;
+}
+
+.login-btn {
+  margin: 5px;
+}
+
+.search-btn {
+  margin: 5px;
+}
+
+.filter-btn {
+  padding: 5px;
+  margin-left: 10px;
+}
