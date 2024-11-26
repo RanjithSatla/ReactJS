@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div id="root">
-        <!-- Using HTML -->
-      <h1>Hello World</h1>  
+      <!-- Using HTML -->
+      <!-- This will get replaced by parent/heading by React later -->
+      <!-- Anything above and below the root will be rendered as it is on UI and the React only replaces root -->
+      <h1>Hello World</h1>
       <!-- Using Javascript -->
+
       <!-- <script>
         const heading = document.createElement("h1");
         heading.innerHTML = "Hello World from JS";
         const root = document.getElementById("root");
         root.appendChild(heading);
       </script> -->
+
+      <!-- Order of scripts is important -->
+
       <!-- Using React -->
       <script
         crossorigin
@@ -26,8 +32,7 @@
         crossorigin
         src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       ></script>
-      <script src="./App.js">
-      </script>
+      <script src="./App.js"></script>
     </div>
   </body>
 </html>
