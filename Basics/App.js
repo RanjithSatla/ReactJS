@@ -3,7 +3,9 @@ const heading = React.createElement(
   { id: "heading" },
   "Hello World form React!"
 );
+
 // const root = ReactDOM.createRoot(document.getElementById("root"));
+
 console.log(heading); // Heading is a React Element which is an JS Object.
 
 /* OP :
@@ -78,5 +80,40 @@ const parent = React.createElement("div", { id: "parent" }, [
   ]),
 ]);
 
+// Components : Class based and Function based.
+
+// Functional Components : Normal JS functions which return some peice of JSX of React Element.
+
+const name = "Ranjith";
+
+const element = <span>This is react element</span>;
+
+// Any JS expression can be written with in {}. EX : {2+2}, Can be used to next React Element.
+const ExampleComponent = () => {
+  const name = "Ranjith";
+  return (
+    <>
+      <h1>
+        My name is {name}. And I am {20 + 7}
+      </h1>
+      <h2>{element}</h2>
+    </>
+  );
+};
+
+// Component Composition : Nesting a component in another component.
+// As FC is normal JS {ExampleComponent()} works
+
+const ExampleComponent2 = () => {
+  return (
+    <>
+      <ExampleComponent />
+      <h1>Example2</h1>
+    </>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+//Render a Component Syntax : <ComponentName />
+root.render(<ExampleComponent2 />);
